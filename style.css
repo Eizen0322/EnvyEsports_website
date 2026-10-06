@@ -1,0 +1,1895 @@
+/* ==================================================
+   ENVY ESPORTS
+   BLACK + NEON GREEN
+================================================== */
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+/* ==================================================
+   VARIABLES
+================================================== */
+
+:root {
+
+    --black: #030303;
+    --black-2: #050505;
+    --dark: #080808;
+    --dark-2: #0c0c0c;
+    --dark-3: #111111;
+
+    --green: #00ff66;
+    --green-dark: #00c853;
+    --green-light: #48ff91;
+
+    --white: #ffffff;
+
+    --gray: #999999;
+    --gray-dark: #555555;
+
+    --border: #1b1b1b;
+
+}
+
+
+/* ==================================================
+   SCROLLBAR
+================================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #030303;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--green);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--green-light);
+}
+
+
+/* ==================================================
+   SELECTION
+================================================== */
+
+::selection {
+    background: var(--green);
+    color: #000000;
+}
+
+
+/* ==================================================
+   NAVIGATION
+================================================== */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(3, 3, 3, 0.90);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid #151515;
+
+}
+
+
+.navbar {
+
+    height: 80px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.logo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 0.8;
+
+}
+
+.logo span {
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 29px;
+
+    letter-spacing: 2px;
+
+    color: #ffffff;
+
+}
+
+.logo span::first-letter {
+
+    color: var(--green);
+
+}
+
+.logo small {
+
+    margin-top: 8px;
+
+    color: #666;
+
+    font-size: 7px;
+
+    letter-spacing: 4px;
+
+}
+
+
+/* ==================================================
+   NAV LINKS
+================================================== */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    list-style: none;
+
+}
+
+.nav-links a {
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
+
+}
+
+.nav-links a:hover {
+
+    color: var(--green);
+
+    text-shadow:
+        0 0 10px rgba(0, 255, 102, 0.5);
+
+}
+
+
+/* ==================================================
+   NAV BUTTON
+================================================== */
+
+.nav-button {
+
+    padding: 13px 23px;
+
+    background: var(--green);
+
+    color: #000000;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+
+}
+
+.nav-button:hover {
+
+    background: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 20px rgba(0, 255, 102, 0.3);
+
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #030303;
+
+}
+
+
+/* HERO BACKGROUND */
+
+.hero-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    opacity: 0.40;
+
+}
+
+
+/* HERO OVERLAY */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.98) 5%,
+            rgba(0,0,0,0.82) 45%,
+            rgba(0,0,0,0.35) 100%
+        );
+
+}
+
+
+/* GREEN GLOW */
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    right: -200px;
+
+    top: 100px;
+
+    background: var(--green);
+
+    opacity: 0.10;
+
+    filter: blur(130px);
+
+    border-radius: 50%;
+
+}
+
+
+/* ==================================================
+   HERO CONTENT
+================================================== */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    padding-left: 8%;
+
+}
+
+.hero-label {
+
+    color: var(--green);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 15px rgba(0,255,102,0.4);
+
+}
+
+.hero h1 {
+
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(90px, 15vw, 190px);
+
+    line-height: 0.75;
+
+    letter-spacing: 3px;
+
+}
+
+.hero h1 span {
+
+    display: block;
+
+    color: var(--green);
+
+    text-shadow:
+        0 0 15px rgba(0,255,102,0.25),
+        0 0 40px rgba(0,255,102,0.10);
+
+}
+
+.hero-description {
+
+    max-width: 520px;
+
+    margin-top: 35px;
+
+    color: #999;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==================================================
+   HERO BUTTONS
+================================================== */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+}
+
+.btn {
+
+    display: inline-block;
+
+    padding: 16px 30px;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
+
+}
+
+
+/* GREEN BUTTON */
+
+.btn-green {
+
+    background: var(--green);
+
+    color: #000000;
+
+}
+
+.btn-green:hover {
+
+    background: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 25px rgba(0,255,102,0.25);
+
+}
+
+
+/* OUTLINE BUTTON */
+
+.btn-outline {
+
+    border: 1px solid #555;
+
+    color: #ffffff;
+
+}
+
+.btn-outline:hover {
+
+    border-color: var(--green);
+
+    color: var(--green);
+
+}
+
+
+/* ==================================================
+   ESTABLISHED
+================================================== */
+
+.established {
+
+    position: absolute;
+
+    right: 8%;
+
+    bottom: 60px;
+
+    z-index: 3;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+}
+
+.established span {
+
+    color: #777;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+}
+
+.established strong {
+
+    color: var(--green);
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 55px;
+
+}
+
+
+/* ==================================================
+   GENERAL SECTION
+================================================== */
+
+.section {
+
+    padding: 120px 8%;
+
+}
+
+.section-header {
+
+    margin-bottom: 60px;
+
+}
+
+.section-header p {
+
+    color: var(--green);
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 12px;
+
+}
+
+.section-header h2 {
+
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(50px, 6vw, 75px);
+
+    line-height: 0.9;
+
+}
+
+.section-header h2 span {
+
+    color: var(--green);
+
+}
+
+
+/* ==================================================
+   ABOUT
+================================================== */
+
+.about {
+
+    background: #090909;
+
+}
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+}
+
+
+/* ABOUT IMAGE */
+
+.about-image {
+
+    position: relative;
+
+    height: 500px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+}
+
+.about-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+
+}
+
+.about-image:hover img {
+
+    transform: scale(1.04);
+
+}
+
+.image-label {
+
+    position: absolute;
+
+    left: 25px;
+
+    bottom: 25px;
+
+    padding: 10px 15px;
+
+    background: var(--green);
+
+    color: #000000;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* ABOUT CONTENT */
+
+.about-content h3 {
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 45px;
+
+    margin-bottom: 25px;
+
+}
+
+.about-content p {
+
+    color: #888;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+
+}
+
+.text-link {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: var(--green);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+
+}
+
+.text-link:hover {
+
+    letter-spacing: 2px;
+
+}
+
+
+/* ==================================================
+   STATS
+================================================== */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 2px;
+
+    margin-top: 80px;
+
+}
+
+.stat-box {
+
+    padding: 35px;
+
+    background: #111111;
+
+    border: 1px solid #1b1b1b;
+
+    transition: 0.3s;
+
+}
+
+.stat-box:hover {
+
+    background: #0d1b12;
+
+    border-color: var(--green);
+
+}
+
+.stat-box strong {
+
+    display: block;
+
+    font-family: "Anton", sans-serif;
+
+    color: var(--green);
+
+    font-size: 45px;
+
+}
+
+.stat-box span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #666;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* ==================================================
+   ENVY BANNER
+================================================== */
+
+.envy-banner {
+
+    position: relative;
+
+    height: 650px;
+
+    overflow: hidden;
+
+    background: #030303;
+
+}
+
+.envy-banner img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition: 0.7s;
+
+}
+
+.envy-banner:hover img {
+
+    transform: scale(1.03);
+
+}
+
+.banner-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.88)
+        );
+
+}
+
+.banner-overlay p {
+
+    color: var(--green);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+
+}
+
+.banner-overlay h2 {
+
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(60px, 9vw, 120px);
+
+    line-height: 0.85;
+
+}
+
+.banner-overlay h2 span {
+
+    display: block;
+
+    color: var(--green);
+
+    text-shadow:
+        0 0 20px rgba(0,255,102,0.25);
+
+}
+
+
+/* ==================================================
+   ROSTER
+================================================== */
+
+.roster {
+
+    background: #050505;
+
+}
+
+.roster-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+}
+
+.player-card {
+
+    position: relative;
+
+    min-height: 400px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 25px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 30%,
+            #030303 100%
+        ),
+        linear-gradient(
+            135deg,
+            #132018,
+            #080808
+        );
+
+    border: 1px solid #1c1c1c;
+
+    transition: 0.4s;
+
+}
+
+.player-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--green);
+
+    box-shadow:
+        0 15px 40px rgba(0,255,102,0.07);
+
+}
+
+.player-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    top: -70px;
+
+    right: -70px;
+
+    background: var(--green);
+
+    opacity: 0.08;
+
+    transform: rotate(45deg);
+
+}
+
+.player-number {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 20px;
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 75px;
+
+    color: rgba(255,255,255,0.07);
+
+}
+
+.player-info {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.player-info p {
+
+    color: var(--green);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+}
+
+.player-info h3 {
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 35px;
+
+    margin: 6px 0;
+
+}
+
+.player-info span {
+
+    color: #666;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ==================================================
+   MATCHES
+================================================== */
+
+.matches {
+
+    background: #090909;
+
+}
+
+.match-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+.match {
+
+    min-height: 130px;
+
+    padding: 20px 30px;
+
+    display: grid;
+
+    grid-template-columns: 90px 1fr 150px 100px;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background: #111111;
+
+    border: 1px solid #1b1b1b;
+
+    transition: 0.3s;
+
+}
+
+.match:hover {
+
+    border-color: var(--green);
+
+    background: #0d160f;
+
+}
+
+.match-date {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+.match-date strong {
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 40px;
+
+}
+
+.match-date span {
+
+    color: var(--green);
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+}
+
+.match-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+.match-info p {
+
+    width: 100%;
+
+    color: #555;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+}
+
+.match-info h3 {
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 25px;
+
+}
+
+.match-info span {
+
+    color: var(--green);
+
+    font-weight: 900;
+
+}
+
+.match-time {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.match-time strong {
+
+    font-size: 13px;
+
+}
+
+.match-time span {
+
+    margin-top: 5px;
+
+    color: #555;
+
+    font-size: 8px;
+
+}
+
+.watch-button {
+
+    padding: 12px;
+
+    border: 1px solid #444;
+
+    text-align: center;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    transition: 0.3s;
+
+}
+
+.watch-button:hover {
+
+    background: var(--green);
+
+    color: #000000;
+
+    border-color: var(--green);
+
+}
+
+
+/* ==================================================
+   NEWS
+================================================== */
+
+.news {
+
+    background: #050505;
+
+}
+
+.news-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+.news-card {
+
+    background: #0c0c0c;
+
+    border: 1px solid #1b1b1b;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+}
+
+.news-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: var(--green);
+
+}
+
+.news-image {
+
+    height: 240px;
+
+    overflow: hidden;
+
+    background: #050505;
+
+}
+
+.news-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+
+}
+
+.news-card:hover .news-image img {
+
+    transform: scale(1.06);
+
+}
+
+.news-content {
+
+    padding: 25px;
+
+}
+
+.news-content small {
+
+    color: var(--green);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+}
+
+.news-content h3 {
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 26px;
+
+    margin: 12px 0;
+
+}
+
+.news-content p {
+
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+.news-content a {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: var(--green);
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+}
+
+
+/* ==================================================
+   JOIN
+================================================== */
+
+.join {
+
+    position: relative;
+
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    text-align: center;
+
+}
+
+.join-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.35;
+
+}
+
+.join-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.75),
+            rgba(0,0,0,0.95)
+        );
+
+}
+
+.join-content {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.join-content > p:first-child {
+
+    color: var(--green);
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
+
+}
+
+.join h2 {
+
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(70px, 10vw, 130px);
+
+    line-height: 0.8;
+
+    margin: 20px 0;
+
+}
+
+.join h2 span {
+
+    display: block;
+
+    color: var(--green);
+
+}
+
+.join-description {
+
+    color: #888;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* ==================================================
+   CONTACT
+================================================== */
+
+.contact {
+
+    background: #090909;
+
+}
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+}
+
+.contact-text h3 {
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+
+}
+
+.contact-text p {
+
+    max-width: 500px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+}
+
+
+/* ==================================================
+   SOCIAL LINKS
+================================================== */
+
+.social-links {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+}
+
+.social-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 22px;
+
+    background: #111111;
+
+    border: 1px solid #1c1c1c;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+
+}
+
+.social-links a strong {
+
+    color: var(--green);
+
+    font-size: 16px;
+
+}
+
+.social-links a:hover {
+
+    background: var(--green);
+
+    color: #000000;
+
+    border-color: var(--green);
+
+    transform: translateY(-3px);
+
+}
+
+.social-links a:hover strong {
+
+    color: #000000;
+
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+
+    padding: 45px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: #030303;
+
+    border-top: 1px solid #151515;
+
+    color: #555;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+}
+
+.footer-logo {
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 25px;
+
+    color: #ffffff;
+
+}
+
+.footer-logo span {
+
+    color: var(--green);
+
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+    .roster-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .news-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .stats {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        height: 70px;
+
+        padding: 0 5%;
+
+    }
+
+    .logo span {
+
+        font-size: 22px;
+
+    }
+
+    .logo small {
+
+        font-size: 6px;
+
+    }
+
+    .nav-button {
+
+        display: none;
+
+    }
+
+
+    /* HERO */
+
+    .hero-content {
+
+        padding: 0 7%;
+
+    }
+
+    .hero-label {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 80px;
+
+    }
+
+    .hero-description {
+
+        font-size: 12px;
+
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .established {
+
+        right: 7%;
+
+        bottom: 30px;
+
+    }
+
+    .established strong {
+
+        font-size: 40px;
+
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+
+        padding: 80px 6%;
+
+    }
+
+    .section-header {
+
+        margin-bottom: 40px;
+
+    }
+
+    .section-header h2 {
+
+        font-size: 48px;
+
+    }
+
+
+    /* ABOUT */
+
+    .about-image {
+
+        height: 350px;
+
+    }
+
+    .about-content h3 {
+
+        font-size: 35px;
+
+    }
+
+
+    /* STATS */
+
+    .stats {
+
+        grid-template-columns: 1fr 1fr;
+
+        margin-top: 50px;
+
+    }
+
+    .stat-box {
+
+        padding: 25px 18px;
+
+    }
+
+    .stat-box strong {
+
+        font-size: 35px;
+
+    }
+
+
+    /* BANNER */
+
+    .envy-banner {
+
+        height: 450px;
+
+    }
+
+    .banner-overlay h2 {
+
+        font-size: 58px;
+
+    }
+
+
+    /* ROSTER */
+
+    .roster-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .player-card {
+
+        min-height: 350px;
+
+    }
+
+
+    /* MATCHES */
+
+    .match {
+
+        grid-template-columns: 60px 1fr;
+
+        padding: 20px 15px;
+
+        gap: 15px;
+
+    }
+
+    .match-time,
+    .watch-button {
+
+        display: none;
+
+    }
+
+
+    /* NEWS */
+
+    .news-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* JOIN */
+
+    .join {
+
+        min-height: 500px;
+
+    }
+
+    .join h2 {
+
+        font-size: 70px;
+
+    }
+
+
+    /* CONTACT */
+
+    .contact-grid {
+
+        gap: 40px;
+
+    }
+
+    .social-links {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* FOOTER */
+
+    footer {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 35px 6%;
+
+    }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+
+        font-size: 65px;
+
+    }
+
+    .hero-label {
+
+        letter-spacing: 2px;
+
+    }
+
+    .section-header h2 {
+
+        font-size: 40px;
+
+    }
+
+    .stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .banner-overlay h2 {
+
+        font-size: 48px;
+
+    }
+
+    .join h2 {
+
+        font-size: 55px;
+
+    }
+
+}
